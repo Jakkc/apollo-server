@@ -34,7 +34,7 @@ const schema = gql`
 const resolvers = {
   Query: {
     author(parent, args, context, info) {
-      return find(authors, { id: args.id });
+      return find(authors, { id: args.id }); // What is this though? authors isn't defined anywhere in the code...
     },
   },
   Author: {
